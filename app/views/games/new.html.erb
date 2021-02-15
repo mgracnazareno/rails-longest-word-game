@@ -1,6 +1,12 @@
 
 <h2>New Game</h2>
-<form action="#">
+
+<ul class="letters">
+  <%= @letters.each do |letter| %>
+  <li><%= letter %></li>
+  <% end %>
+</ul>
+<form action="">
   <input type="text" name="letters" value="<%=params[:letters]  %>">
   <button type="submit" name="submit" value="Submit">Submit!</button>
 </form>

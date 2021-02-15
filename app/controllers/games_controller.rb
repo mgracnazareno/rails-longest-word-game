@@ -1,13 +1,10 @@
 class GamesController < ApplicationController
-
-  attr_accessor :letters
-
   def new
-    @letters = ('a'..'z').to_a
-    10.times.map { @letters.sample }.join
-    # if params[:letters]
-    #   @letters = @letters.map { |letter| letter.sample.*10.join }
-    # end
+    alphabet = ('a'..'z').to_a
+    @letters = []
+    10.times do
+      @letters << alphabet.sample
+    end
   end
 
   def score
